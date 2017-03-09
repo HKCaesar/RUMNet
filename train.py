@@ -13,7 +13,8 @@ print('-'*30)
 print('Loading model...')
 print('-'*30)  
 model = models.unet(shape, models.res_block_basic, models.Activation('relu'), 0, False)  
-#model = models.get_unet(shape)    
+#model = models.get_unet(shape)
+#model = models.test_net(shape)    
 callbacks = [EarlyStopping(monitor='val_loss', patience=3, verbose=0),
                 ModelCheckpoint('./weights/weights.hdf5', 
                                 monitor='val_loss', save_best_only=True)]

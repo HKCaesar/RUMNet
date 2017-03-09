@@ -12,6 +12,7 @@ print('Loading model...')
 print('-'*30)  
 model = models.unet(shape, models.res_block_basic, models.Activation('relu'), 0, False)   
 #model = models.get_unet(shape)
+#model = models.test_net(shape) 
 model.load_weights('./weights/weights.hdf5')
 
 # Look at sample predictions
